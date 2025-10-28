@@ -24,7 +24,7 @@ description: >-
 新手学习
   
 baseurl: ""
-url: "https://ulianshu18.github.io"
+url: "https://lianshu18.github.io"
 theme: minima
 
 plugins:
