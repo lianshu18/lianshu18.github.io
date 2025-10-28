@@ -18,10 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Jekyll Site
-email: example@example.com
-description: >- 
-  A simple Jekyll blog with SEO tag support.
+title: 你好，我是lian
+email: liu704838@163.com
+description: >-
+新手学习
+  
 baseurl: ""
 url: "https://ulianshu18.github.io"
 theme: minima
