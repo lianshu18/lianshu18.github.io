@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+
+  <!-- 引入 Jekyll SEO 标签（若启用了 jekyll-seo-tag 插件） -->
+  {% seo %}
+
+  <!-- 引入主题默认样式（Minima 主题的样式表） --><!-- 引入你自定义的 CSS 文件（用于背景图片等样式） -->
+  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+
+  <!-- 引入 Font Awesome 图标（若需要社交图标等，可选） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- 其他头部资源（如谷歌字体、脚本等，可按需添加） -->
+</head>

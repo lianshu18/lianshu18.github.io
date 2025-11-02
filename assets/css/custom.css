@@ -1,0 +1,16 @@
+/* 全局背景图片 */
+body {
+  background-image: url("/assets/images/img-17575645615836abe14d2f53bab3f64bee4e5320d5f5c.jpg"); /* 背景图片路径，需先上传图片到 assets/images 文件夹 */
+  background-size: cover; /* 背景图自适应覆盖 */
+  background-repeat: no-repeat; /* 不重复平铺 */
+  background-attachment: fixed; /* 滚动时背景固定 */
+  background-position: center center; /* 居中显示 */
+  color: #333; /* 确保文字与背景对比度，可根据背景色调整 */
+}
+
+/* 若背景图较花哨，可给文章区域添加半透明背景提升可读性 */
+.post-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2em;
+  border-radius: 8px;
+}
