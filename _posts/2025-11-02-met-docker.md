@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "meet Docker"
-date: 2023-11-02 00:00:00 +0800
+date: 2025-11-02 00:00:00 +0800
 categories: [docker, update] # 这里是分类，可以有多个，用逗号分隔
 # 可以添加其他元数据，如 tags, author, permalink 等
 ---

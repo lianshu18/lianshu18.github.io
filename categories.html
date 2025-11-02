@@ -3,7 +3,7 @@ layout: page
 title: "文章分类"
 ---
 
-<h1 class="category-page-title">{{ page.title }}</h1> {# 添加这个标题 #}
+<h1 class="category-page-title">{{ page.title }}</h1> {学习}
 
 <ul class="category-list">
   {% for category in site.categories %}
@@ -12,7 +12,7 @@ title: "文章分类"
       <ul class="post-list">
         {% for post in category[1] %}
           <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a> {# 使用 relative_url 过滤器更保险 #}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a> 
             <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
           </li>
         {% endfor %}
