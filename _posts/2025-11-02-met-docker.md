@@ -47,35 +47,36 @@ docker pull docker.io（仓库地址）/library(名字)/nginx:latest （版本�
 表示  官方仓库的官方命名空间下载最新版的nginx docker镜像
 dockerhub官方镜像网站
 ==运行容器==
-
-> [!NOTE]
+'''
 > sudo docker images查看下载的镜像
 > sudo docker rm -f（名字或id）删除镜像
 > docker pull (--platform=xxxxxx拉取特定cpu架构的镜像 eg linux/amd64)nginx
-> sudo docker run -d（防止阻塞当前窗口）/nginx（名字）启动容器，可以自动拉取/-p 80：80端口映射（绑定端口访问容器内部）
-> 图解![[3f1ac500ee01422ca97d38d777cb9326.jpeg~tplv-a9rns2rl98-image.jpg]]![[5ee799d04f994e0bbf37ebe402232817.jpeg~tplv-a9rns2rl98-image.jpg]]![[7552168912b04e1ba810f48a76229b77.jpeg~tplv-a9rns2rl98-image.jpg]]
-> sudo docker ps（查看正在运行的容器）
+> sudo docker run -d（防止阻塞当前窗口）/nginx（名字）启动容器，可以自动拉取/-p 80：80端口映射（绑定端口访问容器内部）'''
+> 图解![[/assets/images/3f1ac500ee01422ca97d38d777cb9326.jpeg~tplv-a9rns2rl98-image.jpg]]![[/assets/images/5ee799d04f994e0bbf37ebe402232817.jpeg~tplv-a9rns2rl98-image.jpg]]![[/assets/images/7552168912b04e1ba810f48a76229b77.jpeg~tplv-a9rns2rl98-image.jpg]]
+'''
+> sudo docker ps（查看正在运行的容器）'''
 
 ==挂载卷==
->[!NOTE]
+'''
 >1.绑定挂载
->docker run -v(宿主机目录：容器内目录)
->图解![[44f8561a946a4e4390bcc16b4083f2f2.jpeg~tplv-a9rns2rl98-image.jpg]]
+>docker run -v(宿主机目录：容器内目录)'''
+>图解![[/assets/images/44f8561a946a4e4390bcc16b4083f2f2.jpeg~tplv-a9rns2rl98-image.jpg]]
+'''
 >作用 数据的持久化保存（删除容器时，宿主机仍旧保存数据）
 >使用绑定挂载时，宿主机的目录会暂时覆盖容器的目录
 >2.命名卷挂载
 >创建一个存储空间-v 卷名字：容器内名字
 >sudo docker volume create nginx
 >直接使用名字回车sudo docker run -v 
->进入目录，切换为root用户sudo -i
-图解![[c452f0f516864660a8869aa086f7fc8b.jpeg~tplv-a9rns2rl98-image.jpg]]
+>进入目录，切换为root用户sudo -i'''
+图解![[/assets/images/c452f0f516864660a8869aa086f7fc8b.jpeg~tplv-a9rns2rl98-image.jpg]]
 
 ==其他参数==
 -e 用来传递环境变量
 --name自定义唯一的名字
 -it 容器进入控制台进行交互
 --rm删除停止容器
-图解![[51e8234c20eb405099ec7f408ce1baf9.jpeg~tplv-a9rns2rl98-image 1.jpg]]
+图解![[/assets/images/51e8234c20eb405099ec7f408ce1baf9.jpeg~tplv-a9rns2rl98-image.jpg]]
 
 --restart always容器停止后重启        /unless-stopped手动停止的容器不在重启
 
@@ -95,7 +96,7 @@ cat/etc/os-release 查看发行版，再找到对应软件
 ==dockerfile==
 图纸，详细列出镜像文件是如何制作的
 docker打包实际就是构建一个镜像
-容器是镜像的 ![[e40efd50b0574b99af9a06f663065240.jpeg~tplv-a9rns2rl98-image.jpg]]“动态实例”，是实际运行应用的进程环境
+容器是镜像的 ![[/assets/images/e40efd50b0574b99af9a06f663065240.jpeg~tplv-a9rns2rl98-image.jpg]]“动态实例”，是实际运行应用的进程环境
 
 ==docker网络==
 bridge桥接网络

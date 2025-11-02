@@ -3,20 +3,28 @@ layout: page
 title: "文章分类"
 ---
 
-<h1 class="category-page-title">{{ page.title }}</h1> {学习}
+<!-- 主标题：显示“文章分类” -->
+<h1 class="category-page-title">{{ page.title }}</h1>
 
 <ul class="category-list">
   {% for category in site.categories %}
     <li class="category-item">
+      <!-- 每个分类的名称（如“技术”“生活”等，取自文章的categories配置） -->
       <h3>{{ category[0] }}</h3>
       <ul class="post-list">
         {% for post in category[1] %}
           <li>
+            <!-- 文章链接（使用相对路径确保兼容性） -->
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a> 
+            <!-- 文章日期（格式化显示） -->
             <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
           </li>
         {% endfor %}
       </ul>
     </li>
   {% endfor %}
+{% else %}
+  <!-- 如果没有任何分类，显示提示 -->
+  <li class="no-category">暂无分类文章</li>
+{% endfor %}
 </ul>
