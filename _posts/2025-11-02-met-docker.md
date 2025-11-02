@@ -1,3 +1,18 @@
+---
+layout: post
+title: "meet Docker"
+date: 2023-11-02 00:00:00 +0800
+categories: [docker, update] # 这里是分类，可以有多个，用逗号分隔
+# 可以添加其他元数据，如 tags, author, permalink 等
+---
+
+<!-- 这里是你文章的实际内容 -->
+# Docker 相关
+
+## Docker 介绍
+
+...
+
 目前其实是基于b站up技术爬爬虾（讲了很多docker的内容）的视频的简要笔记，实际使用命令问ai更加全面（百科全书式的东西）。
 以后可能进行补充
 

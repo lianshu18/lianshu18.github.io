@@ -1,5 +1,9 @@
 <footer class="site-footer">
     <div class="music-player">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2609137895&auto=1&height=66"></iframe>
+        <iframe frameborder="no"  marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2609137895&auto=1&height=66"></iframe>
     </div>
+
+    {% if site.social_links.github %}
+  <a href="{{ site.social_links.github }}" target="_blank">GitHub</a>
+{% endif %}
 </footer>

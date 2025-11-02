@@ -1,16 +1,375 @@
-/* 全局背景图片 */
+/*
+ * 全局背景图片 (文艺风格调整)
+ * 建议选择意境、柔和的图片，避免过于鲜艳或杂乱。
+ * 推荐网站：Unsplash, Pexels, Pixabay 寻找高质量图片。
+ * 例如：模糊的风景、水墨画、静物、几何图案等。
+ */
 body {
-  background-image: url("/assets/images/img-17575645615836abe14d2f53bab3f64bee4e5320d5f5c.jpg"); /* 背景图片路径，需先上传图片到 assets/images 文件夹 */
-  background-size: cover; /* 背景图自适应覆盖 */
-  background-repeat: no-repeat; /* 不重复平铺 */
-  background-attachment: fixed; /* 滚动时背景固定 */
-  background-position: center center; /* 居中显示 */
-  color: #333; /* 确保文字与背景对比度，可根据背景色调整 */
+    /* 保持你的背景图片设置，但请考虑更换一张更具文艺感的图片 */
+    background-image: url("/assets/images/img-17575645615836abe14d2f53bab3f64bee4e5320d5f5c.jpg");
+    background-size: cover; /* 背景图自适应覆盖 */
+    background-repeat: no-repeat; /* 不重复平铺 */
+    background-attachment: fixed; /* 滚动时背景固定 */
+    background-position: center center; /* 居中显示 */
+
+    /* 字体调整：使用优雅的字体 */
+    /* 优先使用系统自带的衬线字体，或者引入 Google Fonts 等 */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* 优雅的衬线字体 */
+    /* 如果想更现代一点，可以考虑：'Merriweather', 'Lora', 'Noto Serif SC' (中文字体) */
+
+    /* 文本颜色调整：与背景图对比，但不要过于刺眼 */
+    color: #4A4A4A; /* 柔和的深灰色，比纯黑更温和 */
+    line-height: 1.6; /* 增加行高，提升阅读舒适度 */
 }
 
-/* 若背景图较花哨，可给文章区域添加半透明背景提升可读性 */
+/*
+ * 若背景图较花哨，可给文章区域加半透明背景提升可读性。
+ * 文艺风格下，可以考虑减少透明度，让背景若隐若现，或者使用更柔和的背景色。
+ */
 .post-content {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2em;
-  border-radius: 8px;
+    /* 半透明背景，但可以调整为更柔和的颜色，或更低的透明度 */
+    background-color: rgba(255, 255, 255, 0.7); /* 比 0.8 更透明一点，让背景更融入 */
+    padding: 2.5em; /* 增加内边距，留白更多，提升阅读舒适度 */
+    border-radius: 12px; /* 增加圆角，更柔和 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 添加轻微阴影，增加层次感，但要柔和 */
+    margin: 3em auto; /* 居中显示，并增加上下外边距，给内容区域更多空间 */
+    max-width: 800px; /* 控制文章最大宽度，避免太宽影响阅读 */
+    /* 如果你的布局是侧边栏，max-width 和 margin auto 可能需要调整 */
+}
+
+/* 进一步美化：标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* 标题也使用衬线字体，或与正文搭配的字体 */
+    color: #333; /* 略深的标题颜色 */
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.2em;
+    border-bottom: 1px solid #E0E0E0; /* 底部添加一条细分隔线，简洁 */
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+/* 链接样式 */
+a {
+    color: #7B68EE; /* 柔和的淡紫色，不那么刺眼 */
+    text-decoration: none; /* 默认不带下划线 */
+    transition: color 0.3s ease; /* 鼠标悬停时颜色平滑过渡 */
+}
+
+a:hover {
+    color: #5D4BA0; /* 鼠标悬停时颜色加深 */
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+/* 引用块样式 */
+blockquote {
+    border-left: 4px solid #B0C4DE; /* 淡蓝色左边框，文艺感 */
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    background-color: rgba(245, 245, 245, 0.7); /* 柔和的浅灰色背景 */
+    color: #666; /* 引用文字颜色 */
+    font-style: italic; /* 斜体 */
+}
+
+/* 代码块样式 */
+pre {
+    background-color: #F8F8F8; /* 浅灰色背景 */
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 1em;
+    overflow-x: auto; /* 防止代码溢出 */
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace; /* 代码字体 */
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #F0F0F0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* 列表样式 */
+ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+ul li {
+    list-style-type: disc; /* 圆点 */
+}
+
+ol li {
+    list-style-type: decimal; /* 数字 */
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%; /* 确保图片不会溢出容器 */
+    height: auto;
+    display: block; /* 避免底部多余空白 */
+    margin: 1.5em auto; /* 图片居中显示，并增加上下边距 */
+    border-radius: 8px; /* 轻微圆角 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 轻微阴影 */
+}
+
+/* 其他可能需要调整的元素，如导航栏、页脚等，需要具体看你的主题结构 */
+/* 例如，如果你的导航栏很突出，可以考虑淡化背景色，增加留白 */
+/* .site-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    padding: 1em 0;
+} */
+/* .site-footer {
+    text-align: center;
+    color: #888;
+    padding: 2em 0;
+    font-size: 0.9em;
+} */
+ /* custom.css 或 _sass/_custom.scss */
+
+/* 文章列表容器 */
+.posts-list {
+    margin-top: 3em;
+    padding: 0 1em; /* 左右留白 */
+}
+
+.posts-list h1 {
+    text-align: center; /* 列表标题居中 */
+    margin-bottom: 2em;
+    font-size: 2.5em;
+    color: #333;
+    border-bottom: none; /* 如果 h1 有底线，这里可以移除 */
+}
+
+/* 单篇文章列表项 */
+.post-item {
+    background-color: rgba(255, 255, 255, 0.9); /* 比主内容区稍微实一点 */
+    padding: 2em;
+    margin-bottom: 2.5em; /* 文章项之间增加间距 */
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* 稍微强一点的阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 悬停动画 */
+}
+
+.post-item:hover {
+    transform: translateY(-5px); /* 鼠标悬停时上浮 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* 阴影变强 */
+}
+
+.post-item .post-title {
+    font-size: 1.8em;
+    margin-top: 0; /* 移除默认的 h2 上边距 */
+    margin-bottom: 0.5em;
+    color: #555;
+    text-decoration: none; /* 确保标题链接没有下划线 */
+}
+
+.post-item .post-title:hover {
+    color: #7B68EE; /* 鼠标悬停时标题颜色变化 */
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+.post-item .post-date {
+    font-size: 0.9em;
+    color: #888;
+    display: block; /* 日期独占一行 */
+    margin-bottom: 1em;
+}
+
+.post-item .post-categories,
+.post-item .post-tags {
+    font-size: 0.85em;
+    color: #777;
+    margin-right: 1em;
+    display: inline-block; /* 让分类和标签可以并排显示 */
+}
+
+.post-item .post-categories a,
+.post-item .post-tags a {
+    background-color: #EFEFEF;
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    margin-left: 0.3em;
+    color: #666;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.post-item .post-categories a:hover,
+.post-item .post-tags a:hover {
+    background-color: #DDD;
+    color: #444;
+}
+
+
+.post-item .post-excerpt {
+    color: #666;
+    margin-top: 1.5em;
+    line-height: 1.5;
+}
+
+.post-item .read-more {
+    display: inline-block;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #7B68EE;
+}
+/* _sass/_custom.scss 或 assets/css/custom.css */
+
+.author-info {
+    background-color: rgba(248, 248, 248, 0.9);
+    padding: 2em;
+    margin-top: 3em;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.author-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.author-details {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 20px; /* 元素之间的间距 */
+}
+
+.author-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 圆形头像 */
+    object-fit: cover; /* 确保图片覆盖区域 */
+    margin: 0; /* 移除默认外边距 */
+    border: 2px solid #EEE;
+}
+
+.author-bio {
+    max-width: 600px;
+    font-style: italic;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.author-social, .author-email {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 0.5em;
+    width: 100%; /* 社交和邮箱链接独占一行 */
+}
+
+.author-social a, .author-email a {
+    color: #7B68EE;
+    text-decoration: none;
+}
+
+.author-social a:hover, .author-email a:hover {
+    text-decoration: underline;
+}
+/* custom.css */
+
+/* 分类页面主标题 */
+.category-page-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #333;
+}
+
+/* 分类列表容器 */
+.category-list {
+    list-style: none; /* 移除默认列表点 */
+    padding: 0;
+    max-width: 800px; /* 控制宽度，居中 */
+    margin: 0 auto 3em auto;
+}
+
+/* 单个分类项 */
+.category-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2.5em; /* 增加内边距 */
+    margin-bottom: 2.5em;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* 稍微强一点的阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-8px); /* 悬停时上浮更明显 */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* 阴影更强 */
+}
+
+.category-item h3 {
+    font-size: 2em; /* 增大分类名称字体 */
+    margin-top: 0;
+    margin-bottom: 1.5em; /* 增加与文章列表的间距 */
+    color: #555;
+    border-bottom: 1px dashed #E0E0E0; /* 添加虚线分隔 */
+    padding-bottom: 0.5em;
+    text-align: center; /* 分类标题居中 */
+    font-family: 'Georgia', serif; /* 保持文艺字体风格 */
+}
+
+/* 分类下的文章列表 */
+.category-item .post-list {
+    list-style: none; /* 移除默认列表点 */
+    padding: 0;
+}
+
+.category-item .post-list li {
+    padding: 0.8em 0;
+    border-bottom: 1px dotted #F0F0F0; /* 文章之间细虚线分隔 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 标题和日期两端对齐 */
+    align-items: center; /* 垂直居中 */
+    flex-wrap: wrap; /* 小屏幕时允许换行 */
+}
+
+.category-item .post-list li:last-child {
+    border-bottom: none; /* 最后一个列表项没有底线 */
+}
+
+.category-item .post-list li a {
+    font-size: 1.2em; /* 文章标题字体 */
+    color: #4A4A4A;
+    text-decoration: none;
+    flex-grow: 1; /* 标题尽可能占据空间 */
+    margin-right: 1em; /* 与日期分隔 */
+}
+
+.category-item .post-list li a:hover {
+    color: #7B68EE; /* 鼠标悬停时颜色 */
+    text-decoration: underline;
+}
+
+.category-item .post-list li .post-meta {
+    font-size: 0.9em;
+    color: #888;
+    flex-shrink: 0; /* 日期不被压缩 */
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .category-item .post-list li {
+        flex-direction: column; /* 小屏幕下标题和日期垂直排列 */
+        align-items: flex-start;
+    }
+    .category-item .post-list li a {
+        margin-bottom: 0.5em;
+        margin-right: 0;
+    }
 }
