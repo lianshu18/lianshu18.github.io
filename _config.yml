@@ -35,3 +35,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  # 添加到 _config.yml 末尾
+include:
+  - assets/images
