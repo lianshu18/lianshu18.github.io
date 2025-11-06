@@ -46,21 +46,22 @@ sudo docker rm -f（名字或id）  # 删除镜像
 docker pull --platform=xxxxxx nginx  # 拉取特定cpu架构的镜像 eg linux/amd64
 sudo docker run -d nginx  # 启动容器，可以自动拉取
 -p 80:80  # 端口映射（绑定端口访问容器内部）
-图解
+'''
 ![img](/assets/images/3f1ac500ee01422ca97d38d777cb9326.jpg)
 ![img](/assets/images/5ee799d04f994e0bbf37ebe402232817.jpg)
 ![img](/assets/images/7552168912b04e1ba810f48a76229b77.jpg)
-
+'''
 sudo docker ps  # 查看正在运行的容器
 挂载卷
 
 # 1. 绑定挂载
 docker run -v(宿主机目录：容器内目录)
+'''
 图解
 ![img](/assets/images/44f8561a946a4e4390bcc16b4083f2f2.jpg)
 
 
-
+'''
 # 作用：数据的持久化保存（删除容器时，宿主机仍旧保存数据）
 # 使用绑定挂载时，宿主机的目录会暂时覆盖容器的目录
 
@@ -70,14 +71,14 @@ sudo docker volume create nginx
 # 直接使用名字回车
 sudo docker run -v 
 # 进入目录，切换为root用户
-sudo -i
+sudo -i'''
 图解
 
 ![img](/assets/images/c452f0f516864660a8869aa086f7fc8b.jpg)
 
 
 其他参数
-
+'''
 
 -e  # 用来传递环境变量
 --name  # 自定义唯一的名字
@@ -85,8 +86,10 @@ sudo -i
 --rm  # 删除停止容器
 --restart always  # 容器停止后重启
 --restart unless-stopped  # 手动停止的容器不在重启
+'''
 图解..
 ![img](/assets/images/51e8234c20eb405099ec7f408ce1baf9.jpg)
+'''
 调试容器
 
 run  # 重新创建容器
@@ -105,7 +108,9 @@ dockerfile
 图纸，详细列出镜像文件是如何制作的
 docker打包实际就是构建一个镜像
 容器是镜像的 
+'''
 ![img](/assets/images/e40efd50b0574b99af9a06f663065240.jpg)
+'''
 "动态实例"，是实际运行应用的进程环境
 
 docker网络
