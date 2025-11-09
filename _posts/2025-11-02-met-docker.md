@@ -79,13 +79,13 @@ sudo -i
 其他参数
 
 
-```-e  # 用来传递环境变量
+-e  # 用来传递环境变量
 --name  # 自定义唯一的名字
 -it  # 容器进入控制台进行交互..
 --rm  # 删除停止容器
 --restart always  # 容器停止后重启
---restart unless-stopped  # 手动停止的容器不在重启```
-```
+--restart unless-stopped  # 手动停止的容器不在重启
+
 图解..
 ![](https://cdn.jsdelivr.net/gh/lianshu18/img-bed/main/img/7552168912b04e1ba810f48a76229b77.jpg)
 
@@ -101,17 +101,17 @@ docker logs id  # 查看日志
 docker exec  # 在容器的内部执行linux命令
 docker exec -it id /bin/sh  # 进入一个正在运行的docker容器内部，获得一个交互式的命令行环境
 需要自己搭建容器的环境，安装软件（很多系统工具缺失）
-cat /etc/os-release 查看发行版，再找到对应软件```
-
+cat /etc/os-release 查看发行版，再找到对应软件
+```
 dockerfile
 图纸，详细列出镜像文件是如何制作的
 docker打包实际就是构建一个镜像
 容器是镜像的 
-```
+
 ![](https://cdn.jsdelivr.net/gh/lianshu18/img-bed/main/img/7552168912b04e1ba810f48a76229b77.jpg)
 
 "动态实例"，是实际运行应用的进程环境
-```
+
 docker网络
 bridge桥接网络
 子网：docker network create 创建，可以指定容器加入不同子网，
@@ -131,6 +131,7 @@ docker compose（n个docker run命令，n>=1）
 简化：把想要执行的命令告诉ai，生成等价的docker compose文件
 
 命令：
+```
 compose up  # 启动运行容器
 down  # 删除容器
 stop  # 停止容器
